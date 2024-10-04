@@ -1,0 +1,128 @@
+:root {
+    --body-color: #FFF8E8;
+    --first-color: #674636;
+    --second-color: #F7EED3;
+    --buttons-color: #AAB396;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    width: 100svw;
+    max-width: 100svw;
+    height: 100svh;
+    max-height: 100svh;
+    background-color: var(--body-color);
+}
+
+button {
+    background-color: var(--buttons-color);
+    color: var(--body-color);
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    border: var(--buttons-color);
+    font-weight: bold;
+    left: 30px;
+
+}
+
+button:hover {
+    background-color: #94a56f;
+}
+
+#log-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 620px;
+    width: 500px;
+    /* margin: 500px 150px; */
+    /* padding: 300px 150px; */
+
+    background-color: var(--body-color);
+    border-radius: 50px;
+    top: 80px;
+    left: 80px;
+    opacity: .8;
+}
+
+body {
+    background-image: url("../images/photo2.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container--title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    right: 10px;
+    color: var(--first-color);
+
+}
+
+.container--UserImage {
+    margin-top: -50px;
+    left: 20px;
+
+}
+
+.container--div--label {
+
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--first-color);
+}
+
+.container--div--input {
+    /* border: none; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid #674636;
+    background-color: white;
+
+
+}
+
+p {
+    color: #906f5f;
+    top: 10px;
+}
+
+.p__a {
+    color: rgb(37, 97, 170);
+    text-decoration: none;
+}
+
+input {
+    color: #936650;
+    border: none;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    outline: none;
+}
+
+.icon_eye,
+.icon_email {
+    background-color: white;
+    height: 60px;
+}
+
+@media (max-width:990px) {
+    #log-in {
+        /* background-color: var(--body-color); */
+        background-image: none;
+    }
+}

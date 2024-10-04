@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./cssPages/home.css">
+</head>
+<body>
+    <header>
+            <div class="header__logo">E-Books</div>
+            <div class="search">
+                <img class="search__image" src="./images/Search.png" alt="">
+                <input class="search__input" type="text" placeholder="Search">
+            </div>
+            <div class="header__hamburger" >
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="header__nav">
+                <ul class="header__ul">
+                    <li> <a  class="color" href="index.html"> Home</a></li>
+                    <li> <a href="./htmlPages/categories.html">Categories</a></li>
+                    <button class="header__button" onclick="document.location = './htmlPages/login.html'">login</button>
+                </ul>
+            </div>    
+    </header>
+    <main>
+        <div class="container">
+            <div id="home">
+                <div class="home__info">
+                    <h2 class="home__title">read free library books online !</h2>
+                    <div class="home__description">search, explore, enjoy. Our digital library puts millions of books and articles at your fingertips. Join us today!</div>
+                </div>
+                <div class="home__image"><img src="./images/6046205542424233186.jpg" alt=""></div>
+            </div>
+            <div class="popular">
+                <p class="main-line">_________________________________________________________________________________________________</p>
+                <h3 class="popular__title">popular</h3>
+                <div class="cards">
+                    <div class="cards__card">
+                        <div class="card__img"><img src="./images/image (3).png" alt=""></div>
+                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="cards__card">
+                        <div class="card__img"><img src="./images/image (5).png" alt=""></div>
+                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="cards__card">
+                        <div class="card__img "><img src="./images/image (4).png" alt=""></div>
+                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="cards__card">
+                        <div class="card__img"><img src="./images/Group 104.png" alt=""></div>
+                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </main>
+    <script src="./jsPages/home.js"></script>
+</body>
+</html>
+

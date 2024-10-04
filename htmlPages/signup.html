@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="../cssPages/signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="left">
+            <div class="left__content">
+                <p class="left__p--welcome">Welcome !</p>
+                <p class="left__p--text">To keep connected with us <br>please login with your personal <br>info, or register if don’t have an account.</p>
+                <button class="leftContent__btn" onclick="document.location = 'login.html'">Login</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <p class="right__p--title">Create Account</p>
+
+            <div class="right__div">
+                <a href=""><img src="../images/Facebook Circled.png" alt="" class="icons__img--facebook"></a>
+                <a href=""><img src="../images/Google.png" alt="" class="icons__img--google"></a>
+                <a href=""><img src="../images/LinkedIn Circled.png" alt="" class="icons__img--linkedIn"></a>
+            </div>
+
+            <form>
+                <p class="form__p">or use email for registration</p>
+                <div class="form__div--user">
+                    <img src="../images/User.png" alt="" class="div__img--user">
+                    <input type="text" placeholder="Name" required ="div__input--user">
+                </div>
+                <div class="form__div--email">
+                    <img src="../images/Email.png" alt="" class="div__img--email">
+                    <input type="email" placeholder="Email" required class="div__input--email">
+                </div>
+                <div class="form__div--password">
+                    <img src="../images/Password.png" alt="" required class="div__img--password">
+                    <input type="password" placeholder="Password" class="div__input--password">
+                </div>
+                <input type="submit" value="Sign up" class="form__input--submit" onclick="document.location = 'login.html'">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
