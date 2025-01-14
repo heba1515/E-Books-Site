@@ -4,73 +4,73 @@ let Books = [
     {
         id: 1,
         name: "chemistry",
-        image: "../images/image1.png",
+        image: "../images/book1.png",
         category: "Science"
     },
     {
         id: 2,
         name: "diary of a wimpy kid",
-        image: "../images/image2.png",
+        image: "../images/book2.png",
         category: "Fantasy"
     },
     {
         id: 3,
         name: "i don't love you any more",
-        image: "../images/image3.png",
+        image: "../images/book3.png",
         category: "Novels"
     },
     {
         id: 4,
         name: "alter happily ever after",
-        image: "../images/image4.png",
+        image: "../images/book4.png",
         category: "Fantasy"
     },
     {
         id: 5,
         name: "read people like a book",
-        image: "../images/image12.png",
+        image: "../images/book12.png",
         category: "Self-help"
     },
     {
         id: 6,
         name: "twisted games",
-        image: "../images/image5.png",
+        image: "../images/book5.png",
         category: "History"
     },
     {
         id: 7,
         name: "the norton introduction to literature",
-        image: "../images/image6.png",
+        image: "../images/book6.png",
         category: "Literary"
     },
     {
         id: 8,
         name: "creepy riddles",
-        image: "../images/image7.png",
+        image: "../images/book7.png",
         category: "Fantasy"
     },
     {
         id: 9,
         name: "sofia mertinez",
-        image: "../images/image8.png",
+        image: "../images/book8.png",
         category: "Kids"
     },
     {
         id: 10,
         name: "lakeside",
-        image: "../images/image11.png",
+        image: "../images/book11.png",
         category: "Romance"
     },
     {
         id: 11,
         name: "the sherwood ring",
-        image: "../images/image10.png",
+        image: "../images/book10.png",
         category: "History"
     },
     {
         id: 12,
         name: "stephen king",
-        image: "../images/image9.png",
+        image: "../images/book9.png",
         category: "Thrillers"
     }
 ]

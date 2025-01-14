@@ -1,72 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>E-Book library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./cssPages/home.css">
-</head>
-<body>
-    <header>
-            <div class="header__logo">E-Books</div>
-            <div class="search">
-                <img class="search__image" src="./images/Search.png" alt="">
-                <input class="search__input" type="text" placeholder="Search">
-            </div>
-            <div class="header__hamburger" >
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="header__nav">
-                <ul class="header__ul">
-                    <li> <a  class="color" href="index.html"> Home</a></li>
-                    <li> <a href="./htmlPages/categories.html">Categories</a></li>
-                    <button class="header__button" onclick="document.location = './htmlPages/login.html'">login</button>
-                </ul>
-            </div>    
-    </header>
-    <main>
-        <div class="container">
-            <div id="home">
-                <div class="home__info">
-                    <h2 class="home__title">read free library books online !</h2>
-                    <div class="home__description">search, explore, enjoy. Our digital library puts millions of books and articles at your fingertips. Join us today!</div>
-                </div>
-                <div class="home__image"><img src="./images/6046205542424233186.jpg" alt=""></div>
-            </div>
-            <div class="popular">
-                <p class="main-line">_________________________________________________________________________________________________</p>
-                <h3 class="popular__title">popular</h3>
-                <div class="cards">
-                    <div class="cards__card">
-                        <div class="card__img"><img src="./images/image (3).png" alt=""></div>
-                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
-                    </div>
-                    <div class="cards__card">
-                        <div class="card__img"><img src="./images/image (5).png" alt=""></div>
-                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
-                    </div>
-                    <div class="cards__card">
-                        <div class="card__img "><img src="./images/image (4).png" alt=""></div>
-                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
-                    </div>
-                    <div class="cards__card">
-                        <div class="card__img"><img src="./images/Group 104.png" alt=""></div>
-                        <div class="card__icon book-details-page__wishlist"><i class="fa-regular fa-heart"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </main>
-    <script src="./jsPages/home.js"></script>
-</body>
-</html>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap"
+        rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav">
+            <h2 class="nav__title">E-Books</h2>
+            <!-- <div class="nav__hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div> -->
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"> <a class="active" href="index.html">Home</a></li>
+                    <li class="nav__item"> <a href="./htmlPages/categories.html">Books</a></li>
+                    <li class="nav__item"> <a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <i class="fa-solid fa-magnifying-glass search-button" id="search-button"></i>
+                <i class="fa-solid fa-user login-button" id="login-button"></i>
+                <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+                <!-- <button class="header__button" onclick="document.location = './htmlPages/login.html'">login</button> -->
+            </div>
+        </nav>
+    </header>
+
+    <div class="search" id="search-content">
+        <form action="" class="search__form">
+            <input class="search__input" type="search" placeholder="What are you looking for?">
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+        </form>
+        <i class="fa-solid fa-xmark search__close" id="search-close"></i>
+    </div>
+
+
+    <main class="main">
+        <div class="home" id="home">
+            <div class="home__container">
+                <div class="home__data">
+                    <h2 class="home__title">read free library books online !</h2>
+                    <p class="home__description">
+                        Search, Explore, Enjoy! <br>
+                        Our digital library puts millions of books
+                        and articles at your fingertips. Find the best e-books from your favorite writers.
+                    </p>
+                    <button class="home-button">Explore More</button>
+                </div>
+                <div class="home__image">
+                    <img src="./images/home-img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="services__container">
+                <div class="services__card">
+                    <i class="fa-solid fa-truck"></i>
+                    <h3 class="services__title">Free Shipping</h3>
+                    <p class="services__description">Order More Than $100</p>
+                </div>
+                <div class="services__card">
+                    <i class="fa-solid fa-lock"></i>
+                    <h3 class="services__title">Secure Payment</h3>
+                    <p class="services__description">100% Secure Payment</p>
+                </div>
+                <div class="services__card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3 class="services__title">24/7 Support</h3>
+                    <p class="services__description">Call Us Anytime</p>
+                </div>
+            </div>
+        </div>
+        <div class="featured" id="featured">
+            <h2 class="featured__title">Featured Books</h2>
+            <div class="featured__container">
+                <div class="featured__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book1.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book2.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book3.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book4.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book5.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book6.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book7.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book8.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="featured__card swiper-slide">
+                            <img src="images/book9.png" alt="Book-img" class="featured__img">
+                            <div class="book-favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -7,38 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../cssPages/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
 
 <body>
-    <section id="log-in">
-        <div class="container">
-            <img class="container--UserImage" src="../images/Male User.png" alt="">
-            <h1 class="container--title">Log In</h1>
-            <br>
-            <div class="container--div">
-                <label class="container--div--label" for="">Email :</label>
-                <div class="container--div--input">
-                    <input type="email" placeholder="  Enter The Email ">
-                    <img class="icon_email" src="../images/Email.png" alt="">
+    <div class="login" id="log-in">
+        <div class="login__container">
+            <i class="fa-solid fa-user profile-img"></i>
+            <h1 class="login__title">Login</h1>
+            <form action="" class="login__form">
+                <div>
+                    <label class="login__label" for="login-email">Email</label>
+                    <input type="email" class="login__input" id="login-email" placeholder="Enter your email">
                 </div>
-            </div>
-            <br>
-            <div class="container--div">
-                <Label class="container--div--label">Password :</Label>
-                <div class="container--div--input">
-                    <input type="password" placeholder="********* ">
-                    <img class="icon_eye" src="../images/Eye.png" alt="">
+                <div>
+                    <Label class="login__label" for="login-password">Password</Label>
+                    <input type="password" class="login__input" id="login-password" placeholder="Enter your password">
                 </div>
-            </div>
-            <br>
-            <button onclick="document.location = 'categories.html'">Login</button>
-            <br>
-            <p>Don’t have an account? <a href="signup.html" class="p__a">sign up</a></p>
-            <br>
+                <button type="submit" class="login__button">Log In</button>
+            </form>
+            <p class="login__sign">Don’t have an account? <a href="signup.html">sign up</a></p>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>
