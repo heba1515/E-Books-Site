@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav">
+            <h2 class="nav__title">E-Books</h2>
+            <!-- <div class="nav__hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div> -->
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"> <a href="../index.html">Home</a></li>
+                    <li class="nav__item"> <a class="active_nav_li" href="#">Books</a></li>
+                    <li class="nav__item"> <a href="#">About</a></li>
+                    <li class="nav__item"> <a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <i class="fa-solid fa-magnifying-glass search-button" id="search-button"></i>
+                <i class="fa-regular fa-heart favorite-button" id="favorite-button"></i>
+                <i class="fa-solid fa-user login-button" id="login-button"></i>
+                <!-- <button class="header__button" onclick="document.location = './htmlPages/login.html'">login</button> -->
+            </div>
+        </nav>
+    </header>
+
+    <div class="search" id="search-content">
+        <form action="" class="search__form">
+            <input class="search__input" type="search" placeholder="What are you looking for?">
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+        </form>
+        <i class="fa-solid fa-xmark search__close" id="search-close"></i>
+    </div>
+
+    <main>
+        <div class="aside">
+            <div class="aside__content">
+                <h2 class="aside__h2">Categories</h2>
+    
+                <div class="aside__search">
+                    <input type="text" class="aside__search__input" placeholder=" search ">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+    
+                <ul class="aside__ul">
+                    <button class="aside__ul__categories active" onclick="filterProduct('All')">All</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Novels')">Novels</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Fantasy')">Fantasy</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Literary')">Literary</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Crime')">Crime</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Kids')">Kids</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Thrillers')">Thrillers</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Self-help')">Self-help</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Romance')">Romance</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('History')">History</button>
+                    <button class="aside__ul__categories" onclick="filterProduct('Science')">Science</button>
+                </ul>
+            </div>
+            
+            <div class="verticle-line"></div>
+        </div>
+    
+        <div class="main">
+            <div class="main__top">
+                <h2 class="main__h2">Books</h2>
+    
+                <form action="">
+                    <select id="dropdown" name="filter">
+                        <option value="most-read">Most Read</option>
+                        <option value="popular">Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </form>
+            </div>
+    
+            <div class="main__books">
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <h2 class="footer__title">E-Books</h2>
+            <p class="footer__description">
+                Find and explore the best <br>
+                eBooks from all your <br>
+                favorite writers.
+            </p>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">About</h3>
+            <ul class="footer__links">
+                <li> <a class="footer__link" href="#">Awards</a></li>
+                <li> <a class="footer__link" href="#">FAQs</a></li>
+                <li> <a class="footer__link" href="#">Privacy policy</a></li>
+                <li> <a class="footer__link" href="#">Terms of Services</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Company</h3>
+            <ul class="footer__links">
+                <li> <a class="footer__link" href="#">Blogs</a></li>
+                <li> <a class="footer__link" href="#">Community</a></li>
+                <li> <a class="footer__link" href="#">Our Team</a></li>
+                <li> <a class="footer__link" href="#">Help Center</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Contact</h3>
+            <ul class="footer__links">
+                <li> <a class="footer__link" href="#">contact@gmail.com</a></li>
+                <li> <a class="footer__link" href="#">(+20)123-456-789</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Social</h3>
+            <div class="footer__social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/categories.js"></script>
+</body>
+
+</html>

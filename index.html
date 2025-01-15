@@ -30,15 +30,16 @@
             </div> -->
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__item"> <a class="active" href="index.html">Home</a></li>
-                    <li class="nav__item"> <a href="./htmlPages/categories.html">Books</a></li>
+                    <li class="nav__item"> <a class="active" href="#">Home</a></li>
+                    <li class="nav__item"> <a href="./html/categories.html">Books</a></li>
                     <li class="nav__item"> <a href="#">About</a></li>
+                    <li class="nav__item"> <a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="nav__actions">
                 <i class="fa-solid fa-magnifying-glass search-button" id="search-button"></i>
+                <i class="fa-regular fa-heart favorite-button" id="favorite-button"></i>
                 <i class="fa-solid fa-user login-button" id="login-button"></i>
-                <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
                 <!-- <button class="header__button" onclick="document.location = './htmlPages/login.html'">login</button> -->
             </div>
         </nav>
@@ -57,20 +58,23 @@
         <div class="home" id="home">
             <div class="home__container">
                 <div class="home__data">
-                    <h2 class="home__title">read free library books online !</h2>
+                    <h2 class="home__title">read free library books online</h2>
                     <p class="home__description">
                         Search, Explore, Enjoy! <br>
                         Our digital library puts millions of books
-                        and articles at your fingertips. Find the best e-books from your favorite writers.
+                        and articles at your fingertips. Find the 
+                        best e-books from your favorite writers.
                     </p>
-                    <button class="home-button">Explore More</button>
+                    <button class="home-button">
+                        <a href="./html/categories.html">Explore More</a>
+                    </button>
                 </div>
                 <div class="home__image">
                     <img src="./images/home-img.jpg" alt="">
                 </div>
             </div>
         </div>
-        <div class="services">
+        <!-- <div class="services">
             <div class="services__container">
                 <div class="services__card">
                     <i class="fa-solid fa-truck"></i>
@@ -88,7 +92,7 @@
                     <p class="services__description">Call Us Anytime</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="featured" id="featured">
             <h2 class="featured__title">Featured Books</h2>
             <div class="featured__container">
@@ -158,7 +162,73 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
         </div>
+        <div class="explore" id="explore">
+            <div class="explore__container">
+                <div class="explore__images">
+                    <img src="images/book11.png" alt="" class="explore__img-1">
+                    <img src="images/book9.png" alt="" class="explore__img-2">
+                </div>
+                <div class="explore__data">
+                    <h2 class="explore__title">
+                        More Than 5000 e-book to read
+                    </h2>
+                    <p class="explore__description">
+                        Dive into a vast library with hundreds of books across every category imaginable.
+                        Discover stories that captivate, inspire, and entertain – all in one place.
+                        Start exploring today and find your next favorite book!
+                    </p>
+                    <button  class="explore-button">
+                        <a href="./html/categories.html">Explore Now</a>
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <h2 class="footer__title">E-Books</h2>
+            <p class="footer__description">
+                Find and explore the best <br>
+                eBooks from all your <br>
+                favorite writers.
+            </p>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">About</h3>
+            <ul class="footer__links">
+                <li> <a class="footer__link" href="#">Awards</a></li>
+                <li> <a class="footer__link" href="#">FAQs</a></li>
+                <li> <a class="footer__link" href="#">Privacy policy</a></li>
+                <li> <a class="footer__link" href="#">Terms of Services</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Company</h3>
+            <ul class="footer__links">
+                <li> <a class="footer__link" href="#">Blogs</a></li>
+                <li> <a class="footer__link" href="#">Community</a></li>
+                <li> <a class="footer__link" href="#">Our Team</a></li>
+                <li> <a class="footer__link" href="#">Help Center</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Contact</h3>
+            <ul class="footer__links">
+                <li> <a class="footer__link" href="#">contact@gmail.com</a></li>
+                <li> <a class="footer__link" href="#">(+20)123-456-789</a></li>
+            </ul>
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Social</h3>
+            <div class="footer__social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>

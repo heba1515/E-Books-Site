@@ -73,96 +73,122 @@ let Books = [
         image: "../images/book9.png",
         category: "Thrillers"
     }
-]
-
+];
 
 let mainBooks = document.querySelector(".main__books");
 
-
-function displayBooks(arr){
-    mainBooks.innerText = "";
-    for(let i=0; i<arr.length; i++){
+function displayBooks(arr) {
+    mainBooks.innerHTML = ""; 
+    for (let book of arr) {
         let imgContainer = document.createElement("div");
-        imgContainer.classList.add("main__book");
-    
-        let image = document.createElement("img");
-        image.classList.add("main__book__img");
-        image.setAttribute("src", arr[i].image);
-    
-        imgContainer.appendChild(image);
+        imgContainer.classList.add("main__book", book.category);
+
+        imgContainer.innerHTML = `
+            <img class="main__book__img" src="${book.image}" alt="${book.name}">
+            <div class="book-favorite">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        `;
         mainBooks.appendChild(imgContainer);
     }
+
+    // Add Wishlist 
+    addWishlistFunctionality();
 }
+
+function addWishlistFunctionality() {
+    const wishlistIcons = document.querySelectorAll('.book-favorite');
+
+    wishlistIcons.forEach((wishlistIcon) => {
+        const wishlistText = wishlistIcon.querySelector('i');
+
+        wishlistIcon.addEventListener('click', () => {
+            if (wishlistText.classList.contains('fa-regular')) {
+                wishlistText.classList.remove('fa-regular');
+                wishlistText.classList.add('fa-solid');
+                wishlistText.style.color = "red"; 
+            } else {
+                wishlistText.classList.remove('fa-solid');
+                wishlistText.classList.add('fa-regular');
+                wishlistText.style.color = ""; 
+            }
+        });
+    });
+}
+
 displayBooks(Books);
 
-
-for(let i of Books){
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("main__book", i.category, "hide");
-
-    let image = document.createElement("img");
-    image.classList.add("main__book__img");
-    image.setAttribute("src", i.image);
-
-    imgContainer.appendChild(image);
-    mainBooks.appendChild(imgContainer);
-}
-
-
-
-function filterProduct(value){
+function filterProduct(value) {
     let buttons = document.querySelectorAll(".aside__ul__categories");
-    buttons.forEach((button)=>{
-        if(value == button.innerText){
+    buttons.forEach((button) => {
+        if (value === button.innerText) {
             button.classList.add("active");
-        }else{
+        } else {
             button.classList.remove("active");
         }
     });
 
-
     let items = document.querySelectorAll(".main__book");
-    items.forEach((item)=>{
-        if(value == "All"){
+    items.forEach((item) => {
+        if (value === "All") {
             item.classList.remove("hide");
-        }else{
-            if(item.classList.contains(value)){
+        } else {
+            if (item.classList.contains(value)) {
                 item.classList.remove("hide");
-            }else{
+            } else {
                 item.classList.add("hide");
             }
         }
     });
 }
 
-
-
 let searchInput = document.querySelector(".aside__search__input");
 
-searchInput.addEventListener("keyup", ()=>{
-    let searchValue = searchInput.value;
+searchInput.addEventListener("keyup", () => {
+    let searchValue = searchInput.value.toLowerCase(); 
 
-    filteredArray = Books.filter((ele)=>{
-        if(ele.name.includes(searchValue)){
-            return ele.name;
-        }
-    });
-    if(this.value == ""){
+    filteredArray = Books.filter((book) => book.name.toLowerCase().includes(searchValue));
+
+    if (searchValue === "") {
         displayBooks(Books);
-    }else{
-        if(filteredArray == ""){
-            mainBooks.innerHTML = "";
-        }else{
+    } else {
+        if (filteredArray.length === 0) {
+            mainBooks.innerHTML = "<p>No books found.</p>";
+        } else {
             displayBooks(filteredArray);
-            mainBooks.computedStyleMap.display = 'none';
         }
     }
-})
+});
 
+// // Hamburger Menu 
+// const hamburger = document.querySelector(".header__hamburger");
+// hamburger.onclick = function () {
+//     const navBar = document.querySelector(".header__nav");
+//     navBar.classList.toggle("active");
+// };
 
+// Search Button =
+const searchButton = document.getElementById('search-button');
+const searchContent = document.getElementById('search-content');
+const searchClose = document.getElementById('search-close');
 
-window.onload = ()=>{
-    filterProduct("All");
+if (searchButton) {
+    searchButton.addEventListener('click', () => {
+        searchContent.classList.add('show-search');
+    });
 }
 
+if (searchClose) {
+    searchClose.addEventListener('click', () => {
+        searchContent.classList.remove('show-search');
+    });
+}
 
+// Login Button 
+document.getElementById('login-button').addEventListener('click', () => {
+    document.location = '../html/login.html';
+});
+
+window.onload = () => {
+    filterProduct("All");
+};
